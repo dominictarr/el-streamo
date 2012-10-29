@@ -74,10 +74,17 @@ elstreamo.readable(element, {
     return 'click!'
   }
 })
-
+//make a stream of changes in an input, or pressing enter.
 elstreamo.readable(input, {
   keyup: function (e) {
-    return e.keycode //etc!
+    if (e.keyCode == 13) //enter
+      this.queue(input.value)
+  },
+  change: function (e) {
+    this.queue(input.value)
+  },
+  blur: function () {
+    this.queue(input.value)
   }
 })
 

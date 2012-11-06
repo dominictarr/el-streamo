@@ -7,12 +7,12 @@
     "url": "git://github.com/dominictarr/el-streamo.git"
   },
   "dependencies": {
+    "through": "~1.1.1"
   },
-  "devDependencies": {
-  },
+  "devDependencies": {},
   "scripts": {
-    "test": "set -e; for t in test/*.js; do node $t; done"
+    "test": "testling --debug --browser=chrome test/index.js & sleep 1; google-chrome localhost:54046"
   },
   "author": "'Dominic Tarr' <dominic.tarr@gmail.com> (http://dominictarr.com)",
-  "license": "MIT"  
+  "license": "MIT"
 }

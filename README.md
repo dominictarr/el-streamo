@@ -9,7 +9,7 @@ like [sorta](https://github.com/substack/sorta) but different.
 ## example
 
 ``` js 
-var elstreamo = require('elstreamo')
+var elstreamo = require('el-streamo')
 var elstream =
 elstreamo.writable('#id', function (data) {
   //return a HTML element. yeah, this function is a template

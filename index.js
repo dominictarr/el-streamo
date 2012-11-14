@@ -148,6 +148,10 @@ exports.writable = function (el, opts) {
     //create update
     var ch = t.template.call(_ch, data)
     //if the template did not add a id,
+
+    //the template just updated the element, do not replace it.
+    if(ch === _ch) return
+
     //set the id.
     if(ch && !ch.id && id) ch.id = id
     //check if there is an old element with the same id.

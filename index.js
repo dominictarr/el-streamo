@@ -2,7 +2,7 @@ var through = require('through')
 
 function getElement(el) {
   if ('string' === typeof el)
-    return document.getElementById(el)
+    return document.querySelector(el)
   return el
 }
 
